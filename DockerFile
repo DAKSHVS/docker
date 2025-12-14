@@ -1,18 +1,19 @@
 FROM eclipse-temurin:21-jdk
 WORKDIR /app
-COPY Hello.java .
-RUN javac Hello.java
+COPY Hello.java 
+RUN javac Hello.java .
 CMD ["java", "Hello"]
 
-docker build -t LoginApp
-docker ruin -it LoginApp
+docker build -t Hello
+docker ruin -it Hello
 
 
 FROM eclipse-temurin:21-jdk
 WORKDIR /app
-COPY LoginApp.java .
+COPY LoginApp.java 
 RUN javac LoginApp.java .
 CMD ["java", "LoginApp"]
 
-docker build -t Hello
-docker ruin -it Hello
+
+docker build -t LoginApp
+docker ruin -it LoginApp
