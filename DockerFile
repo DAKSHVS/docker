@@ -1,6 +1,6 @@
 FROM eclipse-temurin:21-jdk
 WORKDIR /app
-COPY Hello.java 
+COPY Hello.java .
 RUN javac Hello.java
 CMD ["java", "Hello"]
 
@@ -10,7 +10,7 @@ docker run -it Hello
 
 FROM eclipse-temurin:21-jdk
 WORKDIR /app
-COPY LoginApp.java 
+COPY LoginApp.java .
 RUN javac LoginApp.java
 CMD ["java", "LoginApp"]
 
